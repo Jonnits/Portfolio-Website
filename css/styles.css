@@ -1,0 +1,268 @@
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #005466
+}
+
+.assistant {
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+font-family: "Assistant", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a {
+  font-family: "Assistant", sans-serif;
+  color: #005466;
+  text-decoration: underline; /* Underline by default */
+  transition: text-decoration 0.3s; /* Smooth transition */
+}
+
+a.clicked {
+  text-decoration: line-through; /* Line-through for clicked links */
+}
+
+a:hover, a:focus {
+  text-decoration: none; /* No underlining when hovering over a link */
+}
+
+.button, button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s;
+  }
+  
+  .button:hover, button:hover,
+  .button:focus, button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .button__secondary {
+    background-color: #e0b354;
+    color: #2b2b2b;
+  }
+
+  .navigation-list__item--active {
+    text-decoration: none;
+  }
+
+  .profile_portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+
+  .page-footer {
+    clear: both;
+  }
+
+  .profile {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .page-header__item {
+    flex: 0 1 200px;
+  }
+
+  .page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+div.pullUp a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullUp a:hover:before
+{
+    height: 100%;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/* start grid fallback */
+.grid__item {
+  display: inline-block;
+  width: 33%;
+ }
+ /* end grid fallback */
+ 
+ @supports (display: grid) {
+  .grid {
+    display: grid;
+    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+ 
+  }
+  .grid__item {
+    background-color: lightgray;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+  .grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  }
+ }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: lightgray;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.grid__item:hover {
+  transform: scale(1.05); /* Scale up the item */
+  z-index: 1; /* Bring the hovered item to the front */
+}
+
+@keyframes color-change {
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+}
+
+@keyframes color-change2 {
+  from {
+    fill: #a7420b;
+  }
+  to {
+    fill: #4169e0;
+  }
+}
+
+@keyframes size-change {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+.heart {
+  animation: 
+    color-change2 2s infinite alternate linear,
+    size-change 2s infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* Below is media query defining multiple screen sizes, leave at bottom of CSS! */
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
