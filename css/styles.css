@@ -103,10 +103,6 @@ a:hover, a:focus {
     border-radius: 50%;
   }
 
-.page-footer {
-    clear: both;
-  }
-
   .profile {
     max-width: 700px;
     margin: 0 auto;
@@ -139,6 +135,11 @@ a:hover, a:focus {
     display: flex;
     flex-direction: column;
     text-align: center;
+    text-decoration: none;
+}
+
+.page-footer a {
+  text-decoration: none;
 }
 
 div.pullUp a:before
