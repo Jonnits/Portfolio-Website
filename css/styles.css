@@ -1,6 +1,6 @@
 :root {
   --primary-color: #357b70;
-  --secondary-color: #e0b354;
+  --secondary-color: #F4A261;
   --dark-grey: #2b2b2b;
   --nav-link-color: #F3E2DB;
 }
@@ -177,7 +177,7 @@ div.pullUp a:hover:before
  
   }
   .grid__item {
-    background-color: lightgray;
+    background-color: #E9C46A;
     width: auto;
     min-height: auto;
     margin: 0;
@@ -195,7 +195,6 @@ div.pullUp a:hover:before
 }
 
 .grid__item {
-  background-color: lightgray;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
@@ -302,7 +301,7 @@ li {
   
 .button__secondary {
   font-family: "Karla", sans-serif;  
-  background-color: #E9C46A;
+  background-color: #F4A261;
     color: #2b2b2b;
   }
 
