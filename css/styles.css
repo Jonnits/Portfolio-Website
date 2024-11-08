@@ -13,7 +13,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #005466
+  color: #357b70;
 }
 
 .link-script {
@@ -303,6 +303,6 @@ div.pullUp a:hover:before
     grid-row: auto / auto;
   }
   h1 {
-    font-size: 22px;
+    font-size: 30px;
   }
 }
