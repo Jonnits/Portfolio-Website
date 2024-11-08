@@ -144,6 +144,7 @@ a:hover, a:focus {
     align-items: center;
     padding: 20px;
     background-color: #2D282C;
+    margin-bottom: 50px;
   }
 
   .page-header__item {
@@ -223,7 +224,7 @@ div.pullUp a:hover:before
 }
 
 .grid__item:hover {
-  transform: scale(1.08); 
+  transform: scale(1.05); 
   z-index: 1; 
 }
 
@@ -250,7 +251,7 @@ div.pullUp a:hover:before
     transform: scale(1);
   }
   to {
-    transform: scale(1.08);
+    transform: scale(1.05);
   }
 }
 
