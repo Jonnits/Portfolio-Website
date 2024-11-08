@@ -9,25 +9,27 @@ body {
   background-color: #F3E2DB;
 }
 
-.bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
+h1 {
+  font-family: "Karla", sans-serif;
+  font-weight: 660;
   font-style: normal;
-  color: #357b70;
+  color: #264653;
 }
 
-.link-script {
-  font-family: "Playwrite GB S", cursive;
+.karla {
+  font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
-.assistant {
-  font-family: "Assistant", sans-serif;
+.inco {
+  font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 550;
   font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 a {
@@ -35,7 +37,7 @@ a {
 }
 
 a {
-  font-family: "Assistant", sans-serif;
+  font-family: "Inconsolata", monospace;
   color: #005466;
   text-decoration: underline;
   transition: text-decoration 0.3s;
@@ -43,7 +45,7 @@ a {
 
 .navigation-list {
   list-style-type: none;
-  font-family: "Playwrite GB S", cursive;
+  font-family: "Karla", sans-serif;
   display: flex;
   align-items: center;
   margin: 0;
@@ -58,7 +60,7 @@ a {
 }
 
 .navigation-list a {
-  font-family: "Playwrite GB S", cursive; 
+  font-family: "Karla", sans-serif; 
   text-decoration: underline; 
   color: var(--nav-link-color); 
   transition: text-decoration 0.3s ease;
@@ -80,7 +82,7 @@ a {
 }
 
 p {
-font-family: "Assistant", sans-serif;
+font-family: "Inconsolata", monospace;
 font-optical-sizing: auto;
 font-weight: 400;
 font-style: normal;
@@ -94,38 +96,14 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-.button, button {
-  border: none;
-  display: inline-block;
-  font-family: inherit;
-  background-color: #357b70;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: opacity 0.2s;
-  }
-  
-  .button:hover, button:hover,
-  .button:focus, button:focus {
-    cursor: pointer;
-    opacity: 0.8;
-  }
-  
-  .button__secondary {
-    background-color: #e0b354;
-    color: #2b2b2b;
-  }
-
-  .profile_portrait {
+.profile_portrait {
     float: left;
     width: 250px;
     margin-right: 40px;
     border-radius: 50%;
   }
 
-  .page-footer {
+.page-footer {
     clear: both;
   }
 
@@ -282,6 +260,59 @@ div.pullUp a:hover:before
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-family: "Karla", sans-serif;
+}
+
+td {
+  font-family: "Inconsolata", monospace;
+}
+
+th {
+  font-family: "Karla", sans-serif;
+}
+
+li {
+  font-family: "Inconsolata", monospace;
+}
+
+.button, a.button, button {
+  border: none;
+  display: inline-block;
+  font-family: "Karla";
+  background-color: #2A9D8F;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s;
+  }
+  
+.button:hover, button:hover,
+.button:focus, button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+.button__secondary {
+  font-family: "Karla", sans-serif;  
+  background-color: #E9C46A;
+    color: #2b2b2b;
+  }
+
+form-text {
+  font-family: "Inconsolata";
+}
+
+input, textarea, label {
+  font-family: "Karla", sans-serif; /* Apply Karla font to form fields */
+}
+
 /* Below is media query defining multiple screen sizes, leave at bottom of CSS! */
 
 @media all and (max-width: 500px) {
@@ -302,7 +333,6 @@ div.pullUp a:hover:before
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
-  h1 {
-    font-size: 30px;
-  }
 }
+
+/* End of media query defining multiple screen sizes. */
