@@ -181,6 +181,10 @@ div.pullUp a:hover:before
     width: auto;
     min-height: auto;
     margin: 0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease; 
   }
   .grid__item:last-child {
     grid-column: 3 / 3;
@@ -192,13 +196,6 @@ div.pullUp a:hover:before
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
-}
-
-.grid__item {
-  padding: 20px;
-  text-align: center;
-  border-radius: 5px;
-  transition: transform 0.3s ease; 
 }
 
 .grid__item:hover {
