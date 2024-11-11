@@ -81,6 +81,11 @@ a {
   font-style: normal;
 }
 
+.margin {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
 p {
 font-family: "Inconsolata", monospace;
 font-optical-sizing: auto;
