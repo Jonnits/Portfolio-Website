@@ -11,10 +11,6 @@
   --font-inco: "Inconsolata", monospace;
 }
 
-body {
-  background-color: var(--main-body-color);
-}
-
 .karla {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
@@ -29,6 +25,10 @@ body {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+}
+
+body {
+  background-color: var(--main-body-color);
 }
 
 h1 {
@@ -201,15 +201,23 @@ div.pullUp a:hover:before
     grid-row: 1 / 3;
  }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-
 .grid__item:hover {
   transform: scale(1.05); 
   z-index: 1; 
+}
+.grid__item:nth-child(2) {
+  background-color: var(--logo-color-5); /* Ensure different colors for grid items */
+}
+
+.grid__item:nth-child(3) {
+  background-color: var(--logo-color-2);
+}
+
+.grid__item:nth-child(4) {
+  background-color: var(--logo-color-1);
+}
+.grid__item:nth-child(5) {
+  background-color: var(--logo-color-3);
 }
 
 @keyframes color-change {
