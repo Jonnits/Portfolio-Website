@@ -74,6 +74,12 @@ p {
   font-style: normal;
   }
 
+.error-message {
+  font-family: var(--font-inco);
+  font-weight: 400;
+  color: red;
+}
+
 .navigation-list {
   list-style-type: none;
   font-family: var(--font-karla);
