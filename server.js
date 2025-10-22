@@ -9,7 +9,12 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('.')); // Serve static files from current directory
+
+// Serve static files with proper MIME types
+app.use('/css', express.static(__dirname + '/css'));
+app.use('/js', express.static(__dirname + '/js'));
+app.use('/img', express.static(__dirname + '/img'));
+app.use('/files', express.static(__dirname + '/files'));
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -92,6 +97,16 @@ app.get('/about.html', (req, res) => {
 
 app.get('/work.html', (req, res) => {
   res.sendFile(__dirname + '/work.html');
+});
+
+// Catch-all for other static files
+app.get('*', (req, res) => {
+  const filePath = __dirname + req.path;
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(404).send('File not found');
+    }
+  });
 });
 
 // Start server
