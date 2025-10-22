@@ -77,6 +77,23 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
 });
 
+// Serve HTML files
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/contact.html', (req, res) => {
+  res.sendFile(__dirname + '/contact.html');
+});
+
+app.get('/about.html', (req, res) => {
+  res.sendFile(__dirname + '/about.html');
+});
+
+app.get('/work.html', (req, res) => {
+  res.sendFile(__dirname + '/work.html');
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
