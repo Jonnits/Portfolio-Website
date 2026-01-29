@@ -51,12 +51,12 @@
 <main>
   <div class="margin">
 <!-- about page title -->
-  <h1>A little about me...</h1>
+  <h1>A little about me</h1>
 <!-- main body of text -->
   <p>Hi there! I'm Jon, a full-stack web developer with a passion for turning complex problems into seamless digital solutions.<br><br>
-    Originally from the UK, I moved to California via New York about 7 years ago. Before diving into the world of tech, I spent a good chunk of my career in think tanks and business analysis, where I learned to approach problems from multiple angles and always keep an eye on the bigger picture. <br><br>
-    I also hold a bachelor's in International Politics and a master's in Global Business, which means I can talk code <em>and</em> geopolitics — though I promise I’ll stick to code here. My journey into web development has been one of discovery, growth, and lots of coffee. <br><br>
-    Take a look around my site to explore some of the projects I’ve been working on. Check out my skills and interests below, and if you’re interested in reaching out, feel free to drop me a line through my Contact page. I’d love to hear from you!<br>    
+    Originally from the UK, I moved to California via New York about 8 years ago. Before diving into the world of tech, I spent a good chunk of my career in think tanks and business analysis, where I learned to approach problems from multiple angles and always keep an eye on the bigger picture. <br><br>
+    I hold a bachelor's in International Politics, a master's in Global Business, and a certificate in Full-Stack Web Development from immersion training, which means I can talk code <em>and</em> geopolitics — though I promise I’ll stick to code here. My journey into web development has been one of discovery, growth, and lots of coffee. <br><br>
+    Take a look around my site and explore some of the projects I’ve completed on my Work page. Check out my skills and interests below, and if you’re interested in reaching out, feel free to drop me an email through my Contact page. I’d love to hear from you!<br>    
   </p>
 <!-- table of skills-->
   <table>
@@ -70,53 +70,53 @@
     <tbody>
       <tr>
         <td>Microsoft Office</td>
-        <td>7</td>
+        <td data-start-year="2017"></td>
         <td>Advanced</td>
       </tr>
       <tr>
         <td>Google Drive</td>
-        <td>5</td>
-        <td>Intermed.</td>
-      </tr>
-      <tr>
-        <td>Open-source research</td>
-        <td>5</td>
-        <td>Intermed.</td>
-      </tr>
-      <tr>
-        <td>Salesforce</td>
-        <td>4</td>
-        <td>Intermed.</td>
+        <td data-start-year="2018"></td>
+        <td>Advanced</td>
       </tr>
       <tr>
         <td>Project management</td>
-        <td>4</td>
-        <td>Intermed.</td>
+        <td data-start-year="2019"></td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>Open-source research</td>
+        <td data-start-year="2019"></td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>Salesforce</td>
+        <td data-start-year="2020"></td>
+        <td>Intermediate</td>
       </tr>
       <tr>
         <td>Operations strategy</td>
-        <td>3</td>
-        <td>Intermed.</td>
+        <td data-start-year="2021"></td>
+        <td>Intermediate</td>
       </tr>
       <tr>
         <td>Front-end development</td>
-        <td>1</td>
-        <td>Beginner</td>
+        <td data-start-year="2022"></td>
+        <td>Intermediate</td>
       </tr>
       <tr>
         <td>Back-end development</td>
-        <td>1</td>
-        <td>Beginner</td>
+        <td data-start-year="2022"></td>
+        <td>Intermediate</td>
       </tr>
       <tr>
         <td>Test driven development</td>
-        <td>1</td>
-        <td>Beginner</td>
+        <td data-start-year="2022"></td>
+        <td>Intermediate</td>
       </tr>
     </tbody>
   </table>
 <!-- main body of text -->
-<p>And when I'm away from my keyboard, you can usually find me...</p>
+<p><br>And if you'd like to talk about something other than code, feel free to mention some of my off-keyboard interests...</p>
 <!-- list of skills -->
 <ul>
   <li>Record collecting</li>
@@ -127,9 +127,9 @@
   <li>Running (less badly)</li>
   <li>Skiing (most badly)</li>
   <li>Writing lists</li>
-</ul>
+</ul><br>
 <!-- download resume button -->
-<a href="files/cv.pdf" class="button" download>Download Resumé</a>
+<a href="files/jon_rubra_resume.pdf" class="button" download>Download Resumé</a>
   </div>
 </main>
 <!-- links to socials -->
@@ -150,16 +150,44 @@
                 <a href="https://www.linkedin.com/in/jonrubra" target="_blank">
                 <img src="img/linkedin.svg" alt="LinkedIn logo">
               </a>
-<!-- Medium logo -->
-                <a href="https://medium.com/@jonathanrubra" target="_blank">
-                <img src="img/medium.svg" alt="Medium logo" width="30" height="30">
-              </a>
 <!-- Resume icon -->
-                <a href="files/cv.pdf" download>
+                <a href="files/jon_rubra_resume.pdf" download>
                 <img src="img/resume.svg" alt="Resume download" width="30" height="30">
               </a>
                 </p>
               </div>
           </footer>
+<!-- JavaScript for calculating years of experience -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get current date
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth(); // 0-11, where 0 is January
+    
+    // Find all cells with data-start-year attribute
+    const experienceCells = document.querySelectorAll('td[data-start-year]');
+    
+    experienceCells.forEach(function(cell) {
+        const startYear = parseInt(cell.getAttribute('data-start-year'));
+        
+        // Calculate years of experience
+        // If we're past January (month > 0), count the current year
+        // Otherwise, don't count it yet
+        let years = currentYear - startYear;
+        if (currentMonth === 0) { // January - don't count current year yet
+            years = years - 1;
+        }
+        
+        // Ensure years is at least 1 if they started this year
+        if (years < 1) {
+            years = 1;
+        }
+        
+        // Update the cell content
+        cell.textContent = years;
+    });
+});
+</script>
 </body>
 </html>
