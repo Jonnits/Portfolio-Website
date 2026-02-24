@@ -1,0 +1,19 @@
+# IDE
+.vscode/
+
+# Dependencies
+node_modules/
+
+# Environment and config
+env.example
+.env
+
+# Lock file
+package-lock.json
+
+# Server and setup
+server.js
+SETUP.md
+
+# Linting
+stylelint.config.js
