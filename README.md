@@ -57,9 +57,8 @@ The homepage presents an overview of my skills and experience, along with a sele
 
 ## Where Can I Access This Application?  
 
-- **Live Portfolio**: [https://jonrubra.vercel.app/](https://jonrubra.vercel.app/)
+- **Live Portfolio**: [https://jonrubra.com/](https://jonrubra.com/)
 - **GitHub Repository**: [https://github.com/Jonnits/Portfolio-Website](https://github.com/Jonnits/Portfolio-Website)
-- **GitHub Pages** (static version): [https://jonnits.github.io/Portfolio-Website/](https://jonnits.github.io/Portfolio-Website/)
 
 ## Contact Form Backend  
 
@@ -72,4 +71,4 @@ The contact form is powered by a Node.js backend that:
 
 ## License  
 
-This project is open source and available under the [MIT License](LICENSE).  
+This project is open source and developed by me, Jon Rubra.
