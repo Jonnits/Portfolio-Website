@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jon Rubra | Links</title>
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <style>
+    body.links-body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .links-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 24px 24px;
+      box-sizing: border-box;
+    }
+    .links-page .links-portrait {
+      width: 120px;
+      height: 120px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+    .links-page h1 {
+      margin: 0 0 4px;
+      font-size: 26px;
+    }
+    .links-page .links-subtitle {
+      margin: 0 0 32px;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--header-bar-color);
+    }
+    .links-page .links-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .links-page .links-list a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+    .links-page .links-list .btn-1 { background-color: var(--logo-color-3); color: white; }
+    .links-page .links-list .btn-2 { background-color: var(--logo-color-5); color: #2b2b2b; }
+    .links-page .links-list .btn-3 { background-color: var(--logo-color-6); color: #2b2b2b; }
+    .links-page .links-list .btn-4 { background-color: var(--logo-color-1); color: white; }
+    .links-page .links-list .btn-5 { background-color: var(--logo-color-4); color: white; }
+    .links-page .links-list .btn-1:hover, .links-page .links-list .btn-1:focus,
+    .links-page .links-list .btn-4:hover, .links-page .links-list .btn-4:focus,
+    .links-page .links-list .btn-5:hover, .links-page .links-list .btn-5:focus { opacity: 0.8; }
+    .links-page .links-list .btn-2:hover, .links-page .links-list .btn-2:focus,
+    .links-page .links-list .btn-3:hover, .links-page .links-list .btn-3:focus { opacity: 0.8; }
+    .links-body .page-footer {
+      margin-top: 24px;
+    }
+    @media (min-width: 480px) {
+      .links-page .links-portrait {
+        width: 140px;
+        height: 140px;
+      }
+      .links-page h1 {
+        font-size: 30px;
+      }
+      .links-page .links-list {
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body class="links-body">
+  <main class="links-page">
+    <img src="img/profile_portrait.png" class="links-portrait" alt="Jon Rubra">
+    <h1>Jon Rubra</h1>
+    <p class="links-subtitle">Full Stack Web Developer</p>
+    <ul class="links-list">
+      <li><a href="index.html" class="button btn-1">Portfolio Website</a></li>
+      <li><a href="https://github.com/Jonnits" class="button btn-2" target="_blank" rel="noopener">GitHub Profile</a></li>
+      <li><a href="https://www.linkedin.com/in/jonrubra" class="button btn-3" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+      <li><a href="https://x.com/jonnitscode" class="button btn-4" target="_blank" rel="noopener">X (Twitter) Profile</a></li>
+      <li><a href="files/jon_rubra_resume.pdf" class="button btn-5" download>Download Resume</a></li>
+    </ul>
+  </main>
+  <footer class="page-footer">
+    <p>Find me on</p>
+    <div class="social-media">
+      <p>
+        <a href="https://github.com/Jonnits" target="_blank">
+          <img src="img/github.svg" alt="Github logo">
+        </a>
+        <a href="https://x.com/jonnitscode" target="_blank">
+          <img src="img/x.svg" alt="X logo, formerly Twitter">
+        </a>
+        <a href="https://www.linkedin.com/in/jonrubra" target="_blank">
+          <img src="img/linkedin.svg" alt="LinkedIn logo">
+        </a>
+        <a href="files/jon_rubra_resume.pdf" download>
+          <img src="img/resume.svg" alt="Resume download" width="30" height="30">
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

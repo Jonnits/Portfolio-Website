@@ -99,6 +99,10 @@ app.get('/work.html', (req, res) => {
   res.sendFile(__dirname + '/work.html');
 });
 
+app.get('/links.html', (req, res) => {
+  res.sendFile(__dirname + '/links.html');
+});
+
 // Catch-all for other static files
 app.get('*', (req, res) => {
   const filePath = __dirname + req.path;
